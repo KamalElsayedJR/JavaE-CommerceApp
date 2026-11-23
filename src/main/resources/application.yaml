@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: JaveE-Commerce
+  datasource:
+    url: jdbc:postgresql://localhost:5433/Ecommerce
+    username: admin
+    password: admin
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        default_batch_fetch_size: 20
+    docker:
+      compose:
+        lifecycle-management: start-only
+
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
