@@ -2,6 +2,8 @@ package com.example.javeecommerce.entities;
 
 import jakarta.persistence.*;
 
+import java.math.BigDecimal;
+
 @Entity
 public class Product {
     @Id
@@ -12,7 +14,7 @@ public class Product {
     @Column(name = "description")
     private String Description;
     @Column(name = "price")
-    private double Price;
+    private BigDecimal Price;
     public Long getId() {
         return id;
     }
@@ -37,11 +39,11 @@ public class Product {
         Description = description;
     }
 
-    public double getPrice() {
+    public BigDecimal getPrice() {
         return Price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(BigDecimal price) {
         Price = price;
     }
 
